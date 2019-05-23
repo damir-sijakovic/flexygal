@@ -1,0 +1,221 @@
+<!--
+Flexygal by Damir Sijakovic (c) 2019
+Tiny, one file galery.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style type="text/css">
+
+body{
+    margin: 0px; padding: 24px;
+    background: #0F0F1C;
+}
+
+.flexygal {
+    display:flex;
+    justify-content: center; 
+    flex-flow: row wrap;
+}
+
+
+@media (min-width: 300px) {
+    .box {
+        position: relative;
+        width:100px;
+        height:100px;
+        overflow:hidden;  
+        box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        background: repeating-linear-gradient(to bottom left, #333 0px, #333 20px, #383838 21px, #383838 40px);
+    }
+}
+@media (min-width:600px) {
+    .box {
+        position: relative;
+        width:200px;
+        height:200px;
+        overflow:hidden;  
+        box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        background: repeating-linear-gradient(to bottom left, #333 0px, #333 20px, #383838 21px, #383838 40px);
+    }
+}
+
+@media (min-width: 1000px) {
+    .box {
+        position: relative;
+        width:300px;
+        height:300px;
+        overflow:hidden;  
+        box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        background: repeating-linear-gradient(to bottom left, #333 0px, #333 20px, #383838 21px, #383838 40px);
+    }
+}
+
+
+.image {
+    height: 100%;
+    width: 100%;
+    background: lightgray;
+    position: absolute;
+    box-shadow: none;      
+}
+
+.box:hover {          
+    transform: scale(1.05); 
+    z-index: 1000;
+    transition: all .2s ease-out .2s; 
+    box-shadow:0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);  
+}
+
+.box:hover .image {    
+    transition: all .2s ease-out .2s; 
+    transform: scale(1.5);    
+}
+
+
+.animate-zoom {animation:animatezoom 0.6s}
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+
+
+.modal{
+    z-index:3000;
+    display:block;
+    padding-top:100px;
+    position:fixed;
+    left:0;top:0;
+    width:100%;height:100%;
+    overflow:auto;
+    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,19,.7);
+}
+
+.modal-content{
+    margin:auto;
+    background: repeating-linear-gradient(to bottom left, #0F0F1C 0px, #0F0F1C 20px, #1E0B2E 21px, #1E0B2E 40px);
+    position:relative;
+    padding:10px;
+    outline:0;
+    width:70%;
+    height: 70%;   
+    transition: all .2s; 
+
+} 
+
+
+</style>
+</head>
+<body>
+    
+<div class="flexygal">   
+    
+    <div class="box">
+    <div onclick="do_image(this)"  class="image" style="background: url(img/1.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/2.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/3.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/4.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/5.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image animate-zoom" style="background: url(img/6.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/7.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/8.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/9.png) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div  onclick="do_image(this)" class="image" style="background: url(img/10.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div  onclick="do_image(this)" class="image" style="background: url(img/11.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/12.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(img/13.png) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(wizard.gif) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    <div class="box">
+    <div onclick="do_image(this)" class="image" style="background: url(1111.jpg) center no-repeat; background-size: cover"></div>  
+    </div>    
+    
+    
+</div> 
+ 
+ 
+ <!-- The Modal -->
+<div id="modal_id" class="modal" onClick="close_modal()" style="display:none;"> <!-- block -->
+  <div class="modal-content">
+    <div id="modal-content_id" class="image " style="background: url(xa.png) center no-repeat; background-size: cover"></div> 
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
+
+
+
+
+<script>
+
+var modal_click_sequence = 0;
+
+function do_image(arg_self){  
+    
+    if (modal_click_sequence === 0){ 
+        var self_class = arg_self.className;
+        var parent_class = arg_self.parentElement;
+        parent_class.className = parent_class +' modal';
+        arg_self.className = 'modal-content';
+        arg_self.style["background-size"] = "contain";
+        modal_click_sequence = 1;
+    }
+    
+    else if (modal_click_sequence === 1) {
+        var self_class = arg_self.className;
+        var parent_class = arg_self.parentElement;    
+        parent_class.className = 'box animate-zoom';
+        arg_self.className = 'image animate-zoom';
+        arg_self.style["background-size"] = "cover";
+        modal_click_sequence = 0;    
+    }
+   
+    
+}
+
+
+
+</script>
